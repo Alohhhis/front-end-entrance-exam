@@ -1,4 +1,3 @@
-// Ripple effect на клике
 const rippleTargets = document.querySelectorAll('.button, .editable');
 rippleTargets.forEach(el => {
     el.addEventListener('click', function (e) {
