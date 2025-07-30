@@ -1,13 +1,148 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="./js/main.js"></script>
-  </body>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>cv - Alyona Dokshina</title>
+    <link rel="stylesheet" href="./css/style.css"/>
+</head>
+<body>
+<div id="resume" class="container">
+    <header>
+        <section class="avatar">
+            <img src="./public/avatar.jpg" alt="Avatar-icon" class="avatar"/>
+        </section>
+        <section class="section name">
+            <p style="font-size: 14px">Hello👋 I'm</p>
+            <h2 contenteditable="true" class="editable" data-key="name" style="font-size: 18px">Alyona Dokshina</h2>
+            <h3 contenteditable="true" class="editable" data-key="role" style="font-size: 16px; font-weight: normal">
+                Frontend developer</h3>
+        </section>
+
+
+        <section class="section languages">
+            <h3>Languages</h3>
+            <ul>
+                <li>English
+                    <div class="bar full"></div>
+                </li>
+                <li>Spanish
+                    <div class="bar medium"></div>
+                </li>
+                <li>French
+                    <div class="bar medium"></div>
+                </li>
+            </ul>
+        </section>
+    </header>
+
+    <section class="section education">
+        <h3>Education</h3>
+        <div class="education-grid" id="educationGrid">
+            <div class="education-card editable" contenteditable="true" data-key="education">
+                <div class="like-icon" aria-label="Like">
+                    <svg viewBox="0 0 24 24" class="heart-icon" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5
+        2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09
+        C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42
+        22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                    </svg>
+                </div>
+                <p class="year">2027</p>
+                <p class="specialization">UX/UI</p>
+                <p class="tags">#text #text #text</p>
+                <p class="company">itmo</p>
+            </div>
+            <div class="education-card editable" contenteditable="true" data-key="education">
+                <div class="like-icon" aria-label="Like">
+                    <svg viewBox="0 0 24 24" class="heart-icon" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5
+        2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09
+        C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42
+        22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                    </svg>
+                </div>
+                <p class="year">2027</p>
+                <p class="specialization">UX/UI</p>
+                <p class="tags">#text #text #text</p>
+                <p class="company">itmo</p>
+            </div>
+            <div class="education-card editable" contenteditable="true" data-key="education">
+                <div class="like-icon" aria-label="Like">
+                    <svg viewBox="0 0 24 24" class="heart-icon" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5
+        2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09
+        C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42
+        22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                    </svg>
+                </div>
+                <p class="year">2027</p>
+                <p class="specialization">UX/UI</p>
+                <p class="tags">#text #text #text</p>
+                <p class="company">itmo</p>
+            </div>
+            <div class="education-card editable" contenteditable="true" data-key="education">
+                <div class="like-icon" aria-label="Like">
+                    <svg viewBox="0 0 24 24" class="heart-icon" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5
+        2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09
+        C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42
+        22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                    </svg>
+                </div>
+                <p class="year">2027</p>
+                <p class="specialization">UX/UI</p>
+                <p class="tags">#text #text #text</p>
+                <p class="company">itmo</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section interests">
+        <h3>Interests</h3>
+        <div contenteditable="true" class="editable" data-key="interests">
+
+            branding, typography, photography, poster design
+        </div>
+    </section>
+
+    <!--  <section class=" section contacts">-->
+
+    <!--  </section>-->
+
+    <section class="section tools">
+        <h3>Tools</h3>
+        <div class="design">
+            <p>design</p>
+        </div>
+        <div class="no-code">
+            <p>design</p>
+        </div>
+        <div class="artofocial-intelligence">
+            <p>design</p>
+        </div>
+    </section>
+
+    <section class="section experience">
+        <h3>Experience</h3>
+        <div contenteditable="true" class="editable" data-key="experience">
+            <strong>2023</strong> — Senior Graphic Designer at Pinnacle
+        </div>
+        <div contenteditable="true" class="editable" data-key="experience">
+            <strong>2023</strong> — Senior Graphic Designer at Pinnacle
+        </div>
+        <div contenteditable="true" class="editable" data-key="experience">
+            <strong>2023</strong> — Senior Graphic Designer at Pinnacle
+        </div>
+    </section>
+
+
+    <button id="downloadBtn" class="button">Скачать PDF</button>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script type="module" src="./js/script.js"></script>
+<script src="./js/ripple.js"></script>
+</body>
 </html>
