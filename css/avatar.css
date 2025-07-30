@@ -1,0 +1,8 @@
+.avatar {
+    width: 100%;
+    max-width: 240px;
+    border-radius: 12px;
+    grid-column: 1 / 2;
+    justify-self: center;
+    grid-row: 1/2;
+}

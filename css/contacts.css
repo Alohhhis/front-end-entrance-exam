@@ -1,0 +1,4 @@
+.section.contacts {
+    grid-column: 3 / 5;
+    grid-row: 4 / 5;
+}

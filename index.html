@@ -5,7 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>cv - Alyona Dokshina</title>
     <link rel="stylesheet" href="./css/style.css"/>
-    <link rel="stylesheet" href="./css/experience-styles.css"/>
+    <link rel="stylesheet" href="./css/avatar.css"/>
+    <link rel="stylesheet" href="./css/education.css"/>
+    <link rel="stylesheet" href="./css/tools.css"/>
+    <link rel="stylesheet" href="./css/name.css"/>
+    <link rel="stylesheet" href="./css/language.css"/>
+    <link rel="stylesheet" href="./css/interests.css"/>
+    <link rel="stylesheet" href="css/experience.css"/>
+    <link rel="stylesheet" href="css/contacts.css"/>
 </head>
 <body>
 <div id="resume" class="container">
@@ -14,7 +21,7 @@
             <img src="./public/avatar.jpg" alt="Avatar-icon" class="avatar"/>
         </section>
         <section class="section name">
-            <p style="font-size: 14px">Hello👋 I'm</p>
+            <p style="font-size: 14px">Hello👋🏻 I'm</p>
             <h2 contenteditable="true" class="editable" data-key="name" style="font-size: 18px">Alyona Dokshina</h2>
             <h3 contenteditable="true" class="editable" data-key="role" style="font-size: 16px; font-weight: normal">
                 Frontend developer</h3>
@@ -99,7 +106,6 @@
         </div>
     </section>
 
-
     <section class="section interests">
         <h3>Interests</h3>
         <div contenteditable="true" class="editable" data-key="interests">
@@ -120,9 +126,14 @@
         </div>
     </section>
 
-    <!--  <section class=" section contacts">-->
-
-    <!--  </section>-->
+    <section class="section contacts">
+        <h3>Contacts</h3>
+        <div contenteditable="true" class="editable" data-key="contacts">
+            <p>+7 000 000 0000</p>
+            <p>email@example.com</p>
+            <p>@telegramhandle</p>
+        </div>
+    </section>
     <section class="section tools">
         <h3>Tools</h3>
 
@@ -204,37 +215,65 @@
         </div>
     </section>
 
-    <section class="experience">
+    <section class="section experience">
         <h3>Experience</h3>
-        <div id="experienceContainer"></div>
-        <button id="addExperience">+ Add Experience</button>
+        <div class="experience-grid">
 
-        <template id="experienceTemplate">
-            <div class="experience-card">
+            <div class="experience-card" data-date="2023-07">
                 <div class="experience-header">
-                    <div class="date-and-badge">
-                        <input class="date-input" placeholder="Jul. 2023 - Ago. 2023"/>
-                        <span class="badge most-recent" hidden>most recent</span>
-                    </div>
-                    <button class="remove-btn">×</button>
+                    <div class="date">Jul. 2023 – Ago. 2023</div>
+                    <span class="badge">most recent</span>
                 </div>
-
-                <div class="experience-body">
-                    <div class="left-column">
-                        <input placeholder="Senior Graphic Designer"/>
-                        <input placeholder="Pinnacle | Full-time"/>
+                <div class="experience-content">
+                    <div class="left" contenteditable="true">
+                        <p class="position">Senior Graphic Designer</p>
+                        <p class="details">Pinnacle &nbsp;|&nbsp; Full-time</p>
                     </div>
-                    <div class="right-column" contenteditable="true"
-                         data-placeholder="Enter job responsibilities here...">
-                        <ul class="task-list">
-                            <li>Research and brainstorm various design ideas</li>
-                            <li>Review the work submitted by Junior Designers</li>
-                        </ul>
-                    </div>
+                    <ul class="right" contenteditable="true">
+                        <li>Research and brainstorm various design ideas for content and marketing.</li>
+                        <li>Review the work submitted by Junior Designers and sharing feedback.</li>
+                    </ul>
                 </div>
             </div>
-        </template>
+
+            <div class="experience-card" data-date="2021-01">
+                <div class="experience-header">
+                    <div class="date">Ene. 2021 – Jul. 2023</div>
+                </div>
+                <div class="experience-content">
+                    <div class="left" contenteditable="true">
+                        <p class="position">Graphic / Web designer</p>
+                        <p class="details">Double Square &nbsp;|&nbsp; Full-time</p>
+                    </div>
+                    <ul class="right" contenteditable="true">
+                        <li>Development of internal projects from scratch, product design of brands.</li>
+                        <li>Landing page, webapps and hybrid apps</li>
+                        <li>Taking decisions with stakeholders for the future of products such as Beagle labs, myur...</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-card" data-date="2021-02">
+                <div class="experience-header">
+                    <div class="date">Feb. 2021 – Jul. 2023</div>
+                </div>
+                <div class="experience-content">
+                    <div class="left" contenteditable="true">
+                        <p class="position">Graphic Designer</p>
+                        <p class="details">Freelance</p>
+                    </div>
+                    <ul class="right" contenteditable="true">
+                        <li>Visual design for Events, Brands and Products.</li>
+                        <li>Product design, Packaging Design</li>
+                        <li>Logo Design</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
     </section>
+
+
 
     <button id="downloadBtn" class="button">Скачать PDF</button>
 </div>
@@ -242,6 +281,5 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 <script type="module" src="./js/script.js"></script>
 <script src="./js/ripple.js"></script>
-<script src="./js/experience-script.js"></script>
 </body>
 </html>
