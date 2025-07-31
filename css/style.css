@@ -95,8 +95,9 @@ body {
         transform: translateY(0);
     }
 }
+
 @media (max-width: 480px) {
-    .button{
+    .button {
         grid-row: 12/13;
     }
 }
@@ -109,6 +110,7 @@ body {
         transform-origin: top left;
     }
 }
+
 @media print {
     .container {
         grid-template-columns: 1fr !important;

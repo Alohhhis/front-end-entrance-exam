@@ -42,6 +42,7 @@
 }
 
 .like-icon {
+    all: unset;
     position: absolute;
     top: clamp(0.8rem, 1.5vw, 1rem);
     right: clamp(0.8rem, 1.5vw, 1rem);

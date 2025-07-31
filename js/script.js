@@ -13,7 +13,7 @@ const downloadBtn = document.getElementById('downloadBtn');
 downloadBtn.addEventListener('click', () => {
     const resume = document.getElementById('resume');
 
-    // Сохраняем текущие стили
+
     const originalTransform = resume.style.transform;
     const originalTransformOrigin = resume.style.transformOrigin;
     const originalMarginTop = resume.style.marginTop;
@@ -22,7 +22,7 @@ downloadBtn.addEventListener('click', () => {
     const originalBodyMargin = document.body.style.margin;
     const originalHtmlMargin = document.documentElement.style.margin;
 
-    // Убираем отступы в body/html и масштабируем
+
     document.body.style.margin = '0';
     document.documentElement.style.margin = '0';
 
@@ -33,7 +33,7 @@ downloadBtn.addEventListener('click', () => {
 
     setTimeout(() => {
         html2pdf().from(resume).save('resume.pdf').then(() => {
-            // Возвращаем всё как было
+
             resume.style.transform = originalTransform;
             resume.style.transformOrigin = originalTransformOrigin;
             resume.style.marginTop = originalMarginTop;
