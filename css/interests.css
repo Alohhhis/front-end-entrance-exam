@@ -1,39 +1,121 @@
 .section.interests {
     grid-column: 3 / 5;
+    grid-row: 2 / 4;
+    background: #F0F0F0;
+    padding: 1rem 1.5rem 1.5rem; /* Уменьшен верхний padding */
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    margin-top: -0.5rem; /* Смещаем весь блок выше */
+}
+
+.section.interests h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem; /* Уменьшен отступ снизу */
+    color: #333;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding-top: 0.3rem; /* Небольшой отступ сверху */
+}
+/* Контейнер для редактирования */
+.interests-editable {
+    min-height: 120px;
+    padding: 0.2rem;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.interests-editable[contenteditable="true"]:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: inset 0 0 0 1px #ddd;
+}
+
+/* Сетка интересов */
+.interests-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 0.8rem;
+    align-items: flex-start;
 }
-.section.interests {
-    grid-column: 3 / 5;
-    grid-row: 2 / 4;
-}
+
+/* Стили тегов */
 .interest-tag {
-    display: inline-block;
-    padding: 8px 15px;
+    display: inline-flex;
+    padding: 0.55rem 1.3rem;
     background-color: #FFFFFF;
     border-radius: 20px;
-    font-size: 14px;
+    font-size: 0.86rem;
     color: #555;
-    transition: all 0.2s ease;
-    margin: 5px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+    white-space: nowrap;
+    transition: all 0.25s ease;
+    border: 1px solid #f0f0f0;
+    line-height: 1.3;
+    user-select: none;
 }
 
-.interests-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px 15px;
-    margin-bottom: 30px;
-}
-.interests-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
+.interest-tag:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
 }
 
-.interest-tag {
-    background: #e0e0e0;
-    padding: 0.4rem 0.8rem;
-    border-radius: 6px;
-    font-size: 0.9rem;
+/* Адаптивность для планшетов */
+@media (max-width: 1024px) {
+    .section.interests {
+        grid-column: 2 / 5;
+        padding: 1.3rem;
+    }
+
+    .interest-tag {
+        padding: 0.5rem 1.1rem;
+        font-size: 0.83rem;
+    }
+}
+
+/* Адаптивность для мобильных (горизонтальная) */
+@media (max-width: 768px) {
+    .section.interests {
+        grid-column: 1 / -1;
+        grid-row: auto;
+        padding: 1.2rem;
+    }
+
+    .interests-grid {
+        gap: 0.7rem;
+    }
+
+    .interest-tag {
+        padding: 0.45rem 1rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* Адаптивность для маленьких мобильных (вертикальная) */
+@media (max-width: 480px) {
+    .section.interests {
+        padding: 1rem;
+    }
+
+    .interests-grid {
+        gap: 0.6rem;
+        justify-content: center;
+    }
+
+    .interest-tag {
+        padding: 0.5rem 1.2rem;
+        font-size: 0.82rem;
+        white-space: normal;
+        text-align: center;
+        flex-grow: 1;
+        max-width: calc(50% - 0.6rem);
+        box-sizing: border-box;
+    }
+}
+
+/* Для очень маленьких экранов */
+@media (max-width: 360px) {
+    .interest-tag {
+        max-width: 100%;
+        padding: 0.6rem;
+    }
 }
