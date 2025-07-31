@@ -1,0 +1,237 @@
+.section.experience {
+    grid-column: 2 / 5;
+    grid-row: 5/7;
+    padding: 1.5rem;
+    border-radius: 12px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.section.experience h3 {
+    font-size: clamp(1.25rem, 2vw, 1.5rem);
+    margin-bottom: 1.5rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.experience-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.experience-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.experience-card.first-card {
+    background: #28D979;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.experience-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.experience-card[data-recent="true"] {
+    background: #e8f8ee;
+    border-left: 4px solid #28D979;
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.date {
+    font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+    color: #555;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.experience-card.first-card {
+    background: #28D979;
+    color: white;
+}
+
+.experience-card.first-card .date,
+.experience-card.first-card .badge,
+.experience-card.first-card .position,
+.experience-card.first-card .details,
+.experience-card.first-card .right li {
+    color: white;
+}
+
+.experience-card.first-card .badge {
+    background-color: #7E731266;
+    color:#DDF163 ;
+}
+
+.badge {
+    background: #7E731266;
+    color: white;
+    border-radius: 50px;
+    font-size: clamp(0.7rem, 1.2vw, 0.75rem);
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 0.4rem 0.6rem;
+    white-space: nowrap;
+}
+
+.experience-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1.5rem;
+}
+
+.left p.position {
+    font-weight: 600;
+    font-size: clamp(1rem, 1.5vw, 1.1rem);
+    margin: 0 0 0.5rem;
+    color: #333;
+}
+
+.left p.details {
+    font-size: clamp(0.8rem, 1.2vw, 0.85rem);
+    color: #666;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.right {
+    padding-left: 1rem;
+}
+
+.right ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+
+
+[contenteditable="true"] {
+    border-bottom: 1px dashed transparent;
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+[contenteditable="true"]:focus {
+    border-bottom-color: #ccc;
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.experience-card[data-recent="true"] [contenteditable="true"]:focus {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 1200px) {
+    .section.experience {
+        padding: 1.2rem;
+
+    }
+
+    .experience-card {
+        padding: 1.2rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .section.experience {
+        grid-column: 1 / 4;
+        grid-row: auto;
+    }
+
+    .experience-content {
+        gap: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .experience-content {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .section.experience {
+        grid-column: 1/3;
+    }
+
+
+
+    .experience-header {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .section.experience {
+        padding: 1rem;
+    }
+
+    .experience-card {
+        padding: 1rem;
+    }
+
+    .experience-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .date {
+        white-space: normal;
+    }
+
+
+}
+
+@media (max-width: 480px) {
+    .section.experience {
+        padding: 1rem;
+        grid-column: 1/-1;
+        grid-row: 9/12;
+    }
+
+    .section.experience h3 {
+        margin-bottom: 1rem;
+    }
+
+    .experience-grid {
+        gap: 1rem;
+    }
+
+    .left p.position {
+        margin-bottom: 0.3rem;
+    }
+
+    .badge {
+        padding: 0.3rem 0.5rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .section.experience {
+        padding: 0.8rem;
+    }
+
+    .experience-card {
+        padding: 0.8rem;
+    }
+
+}
