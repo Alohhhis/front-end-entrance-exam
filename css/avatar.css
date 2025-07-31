@@ -1,8 +1,13 @@
+.avatar-section {
+    grid-column: 1 / 2;
+    grid-row: 1;
+    align-self: stretch;
+}
+
 .avatar {
     width: 100%;
-    max-width: 240px;
+    height: 100%;
+    object-fit: cover;
     border-radius: 12px;
-    grid-column: 1 / 2;
-    justify-self: center;
-    grid-row: 1/2;
+    aspect-ratio: 1/1;
 }

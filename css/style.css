@@ -26,25 +26,17 @@ body {
     border-radius: 12px;
 }
 
-header {
-    grid-column: 1 / 5;
-    display: grid;
-    grid-template-columns: 1fr 1fr 2fr;
-    align-items: center;
-    gap: 1rem;
-}
-
-header h1,
-header h2 {
-    margin: 0;
-}
-
 .section {
     background: #F0F0F0;
     padding: 1rem;
     border-radius: 10px;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.05);
     transition: background-color 0.3s ease;
+    flex: 1;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .editable:focus {
@@ -53,22 +45,6 @@ header h2 {
     transition: background-color 0.3s ease;
 }
 
-.bar {
-    height: 6px;
-    background: #ccc;
-    margin-top: 4px;
-    border-radius: 3px;
-}
-
-.full {
-    width: 100%;
-    background: #28D979;
-}
-
-.medium {
-    width: 70%;
-    background: #28D979;
-}
 
 .button {
     grid-column: 1 / 5;
@@ -161,6 +137,21 @@ header h2 {
     .section.education,
     .section.side-right {
         grid-column: 1 / 3;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    .section {
+        width: 100%;
+        min-width: auto;
+    }
+
+    .avatar {
+        max-width: 150px;
     }
 }
 

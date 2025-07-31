@@ -16,33 +16,46 @@
 </head>
 <body>
 <div id="resume" class="container">
-    <header>
-        <section class="avatar">
-            <img src="./public/avatar.jpg" alt="Avatar-icon" class="avatar"/>
-        </section>
-        <section class="section name">
-            <p style="font-size: 14px">Hello👋🏻 I'm</p>
-            <h2 contenteditable="true" class="editable" data-key="name" style="font-size: 18px">Alyona Dokshina</h2>
-            <h3 contenteditable="true" class="editable" data-key="role" style="font-size: 16px; font-weight: normal">
-                Frontend developer</h3>
-        </section>
+    <section class="avatar-section">
+        <img src="./public/avatar.jpg" alt="Avatar-icon" class="avatar"/>
+    </section>
 
+    <section class="name-section">
+        <p style="font-size: 14px">Hello👋🏻 I'm</p>
+        <h2 contenteditable="true" class="editable" data-key="name" style="font-size: 18px">Alyona Dokshina</h2>
+        <h3 contenteditable="true" class="editable" data-key="role" style="font-size: 16px; font-weight: normal">
+            Frontend developer</h3>
+    </section>
 
-        <section class="section languages">
-            <h3>Languages</h3>
-            <ul>
-                <li>English
-                    <div class="bar full"></div>
-                </li>
-                <li>Spanish
-                    <div class="bar medium"></div>
-                </li>
-                <li>French
-                    <div class="bar medium"></div>
-                </li>
-            </ul>
-        </section>
-    </header>
+    <section class="languages-section">
+        <h3>Languages</h3>
+        <div class="language-list">
+            <div class="language-item">
+                <div class="language-content">
+                    <div class="language-name" contenteditable="true">English</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill full"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="language-item">
+                <div class="language-content">
+                    <div class="language-name" contenteditable="true">Spanish</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill medium"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="language-item">
+                <div class="language-content">
+                    <div class="language-name" contenteditable="true">French</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill medium"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section class="section education">
         <h3>Education</h3>
@@ -50,58 +63,47 @@
             <div class="education-card editable" contenteditable="true" data-key="education">
                 <div class="like-icon" aria-label="Like">
                     <svg viewBox="0 0 24 24" class="heart-icon" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5
-        2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09
-        C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42
-        22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09 C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
                     </svg>
                 </div>
-                <p class="year">2027</p>
-                <p class="specialization">UX/UI</p>
-                <p class="tags">#text #text #text</p>
-                <p class="company">itmo</p>
+                <div class="year" contenteditable="true">2024</div>
+                <div class="specialization" contenteditable="true">UX/UI</div>
+                <div class="tags" contenteditable="true">#UX #UI #research<br>#DesignSystem #Agile<br>#wireframing #Figma<br>#IA</div>
+                <div class="company" contenteditable="true">Coursera<br>Neoland</div>
             </div>
-            <div class="education-card editable" contenteditable="true" data-key="education">
+
+            <div class="education-card editable" contenteditable="false" data-key="education">
                 <div class="like-icon" aria-label="Like">
                     <svg viewBox="0 0 24 24" class="heart-icon" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5
-        2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09
-        C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42
-        22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09 C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
                     </svg>
                 </div>
-                <p class="year">2027</p>
-                <p class="specialization">UX/UI</p>
-                <p class="tags">#text #text #text</p>
-                <p class="company">itmo</p>
+                <div class="year" contenteditable="true">2022</div>
+                <div class="specialization" contenteditable="true">Product designer</div>
+                <div class="tags" contenteditable="true">#analytics #research<br>#prototype<br>#wireframes</div>
+                <div class="company" contenteditable="true">California Institute of the Arts</div>
             </div>
-            <div class="education-card editable" contenteditable="true" data-key="education">
+            <div class="education-card editable" contenteditable="false" data-key="education">
                 <div class="like-icon" aria-label="Like">
                     <svg viewBox="0 0 24 24" class="heart-icon" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5
-        2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09
-        C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42
-        22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09 C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
                     </svg>
                 </div>
-                <p class="year">2027</p>
-                <p class="specialization">UX/UI</p>
-                <p class="tags">#text #text #text</p>
-                <p class="company">itmo</p>
+                <div class="year" contenteditable="true">2022</div>
+                <div class="specialization" contenteditable="true">Product designer</div>
+                <div class="tags" contenteditable="true">#analytics #research<br>#prototype<br>#wireframes</div>
+                <div class="company" contenteditable="true">California Institute of the Arts</div>
             </div>
-            <div class="education-card editable" contenteditable="true" data-key="education">
+            <div class="education-card editable" contenteditable="false" data-key="education">
                 <div class="like-icon" aria-label="Like">
                     <svg viewBox="0 0 24 24" class="heart-icon" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5
-        2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09
-        C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42
-        22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09 C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
                     </svg>
                 </div>
-                <p class="year">2027</p>
-                <p class="specialization">UX/UI</p>
-                <p class="tags">#text #text #text</p>
-                <p class="company">itmo</p>
+                <div class="year" contenteditable="true">2022</div>
+                <div class="specialization" contenteditable="true">Product designer</div>
+                <div class="tags" contenteditable="true">#analytics #research<br>#prototype<br>#wireframes</div>
+                <div class="company" contenteditable="true">California Institute of the Arts</div>
             </div>
         </div>
     </section>
@@ -138,7 +140,6 @@
         <h3>Tools</h3>
 
         <div class="tools-grid">
-            <!-- Design Tools -->
             <div class="tool-category design">
                 <h4 class="tool-title">design</h4>
                 <div class="tool-icons">
@@ -221,17 +222,17 @@
 
             <div class="experience-card" data-date="2023-07">
                 <div class="experience-header">
-                    <div class="date">Jul. 2023 – Ago. 2023</div>
-                    <span class="badge">most recent</span>
+                    <div class="date editable" contenteditable="true">Jul. 2023 – Ago. 2023</div>
+                    <span class="badge editable" contenteditable="true">most recent</span>
                 </div>
                 <div class="experience-content">
                     <div class="left" contenteditable="true">
-                        <p class="position">Senior Graphic Designer</p>
-                        <p class="details">Pinnacle &nbsp;|&nbsp; Full-time</p>
+                        <p class="position editable" contenteditable="true">Senior Graphic Designer</p>
+                        <p class="details editable" contenteditable="true">Pinnacle &nbsp;|&nbsp; Full-time</p>
                     </div>
                     <ul class="right" contenteditable="true">
-                        <li>Research and brainstorm various design ideas for content and marketing.</li>
-                        <li>Review the work submitted by Junior Designers and sharing feedback.</li>
+                        <li class="editable" contenteditable="true">Research and brainstorm various design ideas for content and marketing.</li>
+                        <li class="editable" contenteditable="true">Review the work submitted by Junior Designers and sharing feedback.</li>
                     </ul>
                 </div>
             </div>
