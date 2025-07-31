@@ -1,27 +1,28 @@
 .section.interests {
     grid-column: 3 / 5;
-    grid-row: 2 / 4;
+    grid-row: 2 / 3;
     background: #F0F0F0;
-    padding: 1rem 1.5rem 1.5rem; /* Уменьшен верхний padding */
+    padding: clamp(1.2rem, 2vw, 1.5rem);
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    margin-top: -0.5rem; /* Смещаем весь блок выше */
+    display: flex;
+    flex-direction: column;
 }
 
 .section.interests h3 {
-    font-size: 1.4rem;
-    margin-bottom: 1rem; /* Уменьшен отступ снизу */
+    font-size: clamp(1.3rem, 3vw, 1.5rem);
     color: #333;
     font-weight: 600;
     letter-spacing: 0.5px;
-    padding-top: 0.3rem; /* Небольшой отступ сверху */
+    margin-bottom: clamp(1.5rem, 4vw, 3rem);
+    text-align: left;
 }
-/* Контейнер для редактирования */
+
 .interests-editable {
     min-height: 120px;
-    padding: 0.2rem;
     border-radius: 8px;
     transition: background 0.3s ease;
+    flex-grow: 1;
 }
 
 .interests-editable[contenteditable="true"]:focus {
@@ -30,21 +31,20 @@
     box-shadow: inset 0 0 0 1px #ddd;
 }
 
-/* Сетка интересов */
 .interests-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.8rem;
+    gap: clamp(0.6rem, 1.5vw, 0.8rem);
     align-items: flex-start;
+    justify-content: flex-start;
 }
 
-/* Стили тегов */
 .interest-tag {
     display: inline-flex;
-    padding: 0.55rem 1.3rem;
+    padding: clamp(0.5rem, 1.2vw, 0.55rem) clamp(1rem, 1.8vw, 1.3rem);
     background-color: #FFFFFF;
     border-radius: 20px;
-    font-size: 0.86rem;
+    font-size: clamp(0.8rem, 1.8vw, 0.86rem);
     color: #555;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
     white-space: nowrap;
@@ -52,6 +52,8 @@
     border: 1px solid #f0f0f0;
     line-height: 1.3;
     user-select: none;
+    align-items: center;
+    justify-content: center;
 }
 
 .interest-tag:hover {
@@ -59,41 +61,37 @@
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
 }
 
-/* Адаптивность для планшетов */
 @media (max-width: 1024px) {
     .section.interests {
-        grid-column: 2 / 5;
-        padding: 1.3rem;
-    }
-
-    .interest-tag {
-        padding: 0.5rem 1.1rem;
-        font-size: 0.83rem;
-    }
-}
-
-/* Адаптивность для мобильных (горизонтальная) */
-@media (max-width: 768px) {
-    .section.interests {
-        grid-column: 1 / -1;
-        grid-row: auto;
-        padding: 1.2rem;
+        grid-column: 1 / 4;
+        grid-row: 5/7;
     }
 
     .interests-grid {
-        gap: 0.7rem;
-    }
-
-    .interest-tag {
-        padding: 0.45rem 1rem;
-        font-size: 0.8rem;
+        justify-content: center;
     }
 }
 
-/* Адаптивность для маленьких мобильных (вертикальная) */
+@media (max-width: 768px) {
+    .section.interests {
+        grid-column: 1 / 3;
+        grid-row: auto;
+    }
+
+    .interest-tag {
+        white-space: normal;
+        text-align: center;
+    }
+}
+
 @media (max-width: 480px) {
     .section.interests {
-        padding: 1rem;
+        grid-column: 1 / -1;
+        grid-row: 5/6;
+    }
+    .section.interests h3 {
+        text-align: center;
+        margin-bottom: 1.2rem;
     }
 
     .interests-grid {
@@ -102,20 +100,22 @@
     }
 
     .interest-tag {
-        padding: 0.5rem 1.2rem;
-        font-size: 0.82rem;
-        white-space: normal;
-        text-align: center;
-        flex-grow: 1;
+        flex: 1 0 calc(50% - 0.6rem);
         max-width: calc(50% - 0.6rem);
-        box-sizing: border-box;
+        padding: 0.7rem;
+        font-size: 0.82rem;
     }
 }
 
-/* Для очень маленьких экранов */
 @media (max-width: 360px) {
     .interest-tag {
+        flex: 1 0 100%;
         max-width: 100%;
-        padding: 0.6rem;
+        padding: 0.8rem;
+    }
+
+    .section.interests {
+        padding: 1rem 0.8rem;
     }
 }
+
