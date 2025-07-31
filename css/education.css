@@ -31,6 +31,10 @@
     flex-direction: column;
     gap: clamp(0.6rem, 1vw, 0.8rem);
 }
+.education-card:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
 
 .education-card.favorite {
     background-color: #e8f8ee;

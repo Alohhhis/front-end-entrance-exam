@@ -1,6 +1,5 @@
 .section.tools {
     padding: clamp(1rem, 2vw, 1.5rem);
-    background: #f2f2f2;
     border-radius: 12px;
     max-width: 400px;
     grid-column: 1 / 2;

@@ -1,7 +1,6 @@
 .section.interests {
     grid-column: 3 / 5;
     grid-row: 2 / 3;
-    background: #F0F0F0;
     padding: clamp(1.2rem, 2vw, 1.5rem);
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
